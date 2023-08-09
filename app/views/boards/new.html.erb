@@ -1,0 +1,30 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <h1 class="card-title">Create Minesweeper Board</h1>
+
+      <%= form_with model: @board, url: boards_path, method: :post do |form| %>
+
+        <%= render_field(form, :name, "Name") %>
+        <%= render_field(form, :email, "Email") %>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <%= render_field(form, :width, "Width", type: "number") %>
+          </div>
+
+          <div class="form-group col-md-6">
+            <%= render_field(form, :height, "Height", type: "number") %>
+          </div>
+
+          <div class="form-group col-md-6">
+            <%= render_field(form, :mines, "Mines", type: "number") %>
+          </div>          
+        </div>
+
+        <%= form.submit "Generate Board", class: "btn btn-primary mt-3" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
