@@ -68,3 +68,7 @@
 .close-button:hover {
   color: #666666;
 }
+
+.btn-success {
+  margin-right: 10px;
+}
